@@ -17,6 +17,8 @@ html {
     box-sizing: inherit;
   }
 
+
+
   body {
     margin: 0;
   }
@@ -27,6 +29,7 @@ html {
     padding: 1rem;
     padding-bottom: 0;
     overflow: hidden;
+    text-align: center;
   }
 
   header h1 {
@@ -46,25 +49,25 @@ nav ul {
   padding: 0;
 }
 
-nav li {
-  margin: 0;
-  padding: 0;
-}
-
 nav a {
   color: #fff;
   text-decoration: none;
   float: left;
   clear: left;
-  padding: 0;
-  padding-top: .5rem;
-  padding-bottom: .5rem;
   white-space: nowrap;
+  border-radius: 8px;
+  padding: .5em;
 }
 
 nav a:hover {
   background-color: #ff0080;
   color: #fff;
+}
+
+nav li:hover {
+  margin: 0;
+  padding: 0;
+  padding-bottom: .5rem;
 }
 
 .coffee {
@@ -103,30 +106,45 @@ img {
 }
 
 .billquote {
-  font-size: 50%;
   display: inline-block;
+  font-size: 50%;
+  margin: 0;
+  padding: 0;
   }
 
-figure {
+.billpic {
   float: left;
-  max-width: 25rem;
-  width: 40%;
+  width: 100%;
   margin: 0;
   padding:0;
-  }
+  position: relative;
+  overflow: hidden;
+}
+
+figure {
+  display: inline-block;
+  width : 30%;
+  margin: 0;
+  margin-left: 1rem;
+  padding: 0;
+  max-width: 30em;
+}
 
 figcaption {
   clear: both;
+  font-size: 10%;
 }
 
 .top {
   text-align: center;
-  overflow: hidden;
+  margin-bottom: 2rem;
 }
 
 .top a {
   color: #fff;
   text-decoration: none;
+  border-radius: 8px;
+  padding: .5em;
 }
 
 .top a:hover {
@@ -140,32 +158,52 @@ body h2 {
 }
 
 .feedback {
-
+  vertical-align: middle;
 }
 
 .feedback h2 {
   color: #cc1465;
+  font-size: 100%;
+  margin: 1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 2.5rem;
+  max-width: 40em;
 }
 
 blockquote {
   float: right;
-  max-width: 25rem;
-  width: 30%;
+  max-width: 15rem;
+  width: 50%;
+  position: relative;
+  right: 0;
+  bottom: 0;
+  padding: 0;
+  margin: 0;
+  margin-right: .8rem;
 }
 
 footer {
-  background-color: #ff0080;
-  padding: 5rem;
+  background-color: #cc1465;
+  padding: 1rem;
+  margin: 0;
+  margin-top: 1rem;
+  clear: both;
+  text-align: center;
 }
 
 section {
   font-size: .65rem;
   line-height: 1;
-  max-width: 40em;
-  padding-left: 1.1rem;
-  padding-right: 1.1rem;
-  padding-top: 1.8rem;
+  max-width: 25em;
+  padding: 0;
+  padding-top: 1rem;
   margin: 0 auto;
+  margin-bottom: 3rem;
+  clear: both;
+}
+
+p {
+  font-family: Montserrat, sans-serif;
 }
 
 @media only screen and (min-width: 25em) {
@@ -185,7 +223,16 @@ section {
       width: 50%;
     }
 
+  blockquote {
+      margin: 0;
+      width: 18em;
+      margin-left: 1rem;
+      font-size: .25rem;
 }
+
+  figure {
+    margin: 0;
+  }
 
 @media only screen and (min-width: 38em) {
 
@@ -205,9 +252,13 @@ section {
     }
 
   section {
-    max-width: 60rem;
+    max-width: 48rem;
   }
-}
+
+  figure {
+    margin-left: 3rem;
+  }
+]
 
   @media only screen and (min-width: 60em) {
 
@@ -237,8 +288,13 @@ section {
 
   section {
       max-width: 100rem;
-      font-size: .75rem;
+      font-size: .8rem;
+      line-height: 1.2;
     }
+
+    section {
+      font-size: 80%;
+  }
 }
 
 @media only screen and (min-width: 90em) {
@@ -263,5 +319,8 @@ section {
     float: left;
     width: 50%;
   }
+  section {
+    font-size: 80%;
+}
 
 }
