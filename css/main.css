@@ -203,6 +203,14 @@ footer {
   margin-top: 1rem;
   clear: both;
   text-align: center;
+  font-size: 40%;
+  color: #fff;
+}
+
+footer a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
 }
 
 section {
