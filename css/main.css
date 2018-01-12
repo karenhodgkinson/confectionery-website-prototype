@@ -25,26 +25,23 @@ header {
   background-color: #cc1465;
   color: #fff;
   padding: 1rem;
-  padding-bottom: 0;
-  text-align: center;
   overflow: hidden;
+  text-align: center;
 }
 
-header h1 {
+h1 {
   padding: .5rem;
   font-size: 2rem;
   font-weight: bold;
   font-family: Courgette, cursive;
   margin: 0 auto;
-  text-align: center;
 }
 
 nav ul {
   list-style-type: none;
-  font-size: 1.125rem;
   margin: 0;
   padding: 0;
-  text-align: center;
+  overflow: hidden;
 }
 
 nav a {
@@ -52,9 +49,9 @@ nav a {
   text-decoration: none;
   float: left;
   clear: left;
-  white-space: nowrap;
   border-radius: 8px;
   padding: .5em;
+  margin: .125em;
 }
 
 footer a {
@@ -63,17 +60,7 @@ footer a {
   display: block;
 }
 
-.truffles a {
-  display: block;
-  margin: 1rem;
-}
-
-.gummy a {
-  display: block;
-  margin: 1rem;
-}
-
-.coffee a {
+div a {
   display: block;
   margin: 1rem;
 }
@@ -87,18 +74,18 @@ footer a {
 
 nav a:hover {
   background-color: #ff0080;
-  color: #fff;
 }
 
 .top a:hover {
   background-color: #fff;
   color: #ff0080;
+  width: 50%;
+  margin: 0 auto;
+  margin-bottom: 1rem;
 }
 
-nav li:hover {
-  margin: 0;
-  padding: 0;
-  padding-bottom: .5rem;
+.current {
+  background-color: #ff0080;
 }
 
 .coffee {
@@ -120,11 +107,6 @@ nav li:hover {
 }
 
 img {
-  width: 100%;
-}
-
-.top img {
-  display: block;
   width: 100%;
 }
 
@@ -153,6 +135,7 @@ body h2 {
   width: 100%;
   max-width: 20em;
   margin: 0;
+  margin-left: 1rem;
   padding: 0;
   overflow: hidden;
 }
@@ -167,8 +150,9 @@ figure {
 }
 
 figcaption {
-  clear: both;
-  font-size: 10%;
+  width: 100%;
+  margin-left: 1rem;
+  text-align: center;
 }
 
 .top {
@@ -178,28 +162,51 @@ figcaption {
 
 .feedback {
   text-align: center;
+  margin: 0 auto;
+  margin: 1rem;
 }
 
 .feedback h2 {
   color: #cc1465;
   font-size: 100%;
-  margin: 1rem;
   margin-top: 1.5rem;
-  margin-bottom: 2.5rem;
-  max-width: 40em;
   padding: 0;
   padding-top: 2rem;
 }
 
+.feedback h3 {
+  color: #cc1465;
+  font-size: 80%;
+  padding: 0;
+  margin: 0 auto;
+  margin-bottom: 2.5rem;
+}
+
 blockquote {
   float: right;
+  text-align: left;
   max-width: 15rem;
   width: 50%;
   position: relative;
-  text-align: justify;
   margin: 0;
   margin-right: 1.5rem;
   margin-bottom: 2rem;
+}
+
+p {
+  font-family: Montserrat, sans-serif;
+}
+
+blockquote p {
+  text-align: left;
+  margin-left: 1rem;
+}
+
+blockquote cite {
+  text-align: left;
+  display: inline-block;
+  margin-left: 1rem;
+  font-size: .5rem;
 }
 
 footer {
@@ -213,54 +220,118 @@ footer {
   color: #fff;
 }
 
+footer img {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1rem;
+  max-width: 8em;
+  vertical-align: middle;
+}
+
 section {
   font-size: .65rem;
   line-height: 1.3;
   max-width: 25em;
-  padding: 0;
-  padding-top: 1rem;
+  padding: 1rem;
   margin: 0 auto;
   margin-bottom: 3rem;
   clear: both;
   text-align: justify;
 }
 
-p {
-  font-family: Montserrat, sans-serif;
-}
-
 @media only screen and (min-width: 25em) {
 
   html {
-    font-size: 80%;
     line-height: 1.3;
+  }
+
+  header {
+    padding: 0;
+  }
+
+  nav a {
+    font-size: 1rem;
+    padding: 0;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin: 0;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .contact {
+    float: left;
+    width: 25%;
+    clear: none;
+  }
+
+  .current {
+    float: left;
+    width: 25%;
+    clear: none;
+  }
+
+  .home {
+    float: left;
+    width: 25%;
+    clear: none;
+  }
+
+  .about {
+    float: left;
+    width: 25%;
+    clear: none;
   }
 
   .top h3 {
     font-size: 70%;
   }
 
-  nav a {
-    float: left;
-    clear: none;
-    width: 50%;
+  .feedback h2 {
+    font-size: 120%;
+  }
+
+  .feedback h3 {
+    font-size: 100%;
+    width: 70%;
   }
 
   blockquote {
     margin: 0;
     width: 18em;
-    margin-left: 1rem;
     font-size: .25rem;
-  }
-
-  figure {
-    margin: 0;
   }
 
   section {
     max-width: 35rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  footer img {
+    margin-left: 1.3rem;
+    margin-right: 1.3rem;
+    max-width: 9em;
+  }
+
+  .truffles {
+    width: 100%;
+    padding: 2rem;
+    padding-bottom: 0;
+  }
+
+  .gummy {
+    width: 100%;
+    padding: 2rem;
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+
+  .coffee {
+    width: 100%;
+    padding: 2rem;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
 }
@@ -272,18 +343,12 @@ p {
     line-height: 1.4;
   }
 
+  nav a {
+    font-size: 100%;
+  }
+
   .top h3 {
     font-size: 80%;
-  }
-
-  nav a {
-    float: left;
-    clear: none;
-    width: 25%;
-  }
-
-  nav ul {
-    font-size: 1rem;
   }
 
   section {
@@ -294,10 +359,29 @@ p {
     margin-left: 3rem;
   }
 
-  .feedback h2 {
-    max-width: 80rem;
-    padding-top: 2rem;
-    font-size: 1rem;
+  .feedback h3 {
+    width: 65%;
+  }
+
+  footer img {
+    margin-left: 3rem;
+    margin-right: 3rem;
+    max-width: 10em;
+  }
+
+  .truffles {
+    width: 33.3%;
+    padding: 0;
+  }
+
+  .gummy {
+    width: 33.3%;
+    padding: 0;
+  }
+
+  .coffee {
+    width: 33.3%;
+    padding: 0;
   }
 
 }
@@ -313,18 +397,15 @@ p {
     font-size: 100%;
   }
 
-  .feedback h2 {
-    max-width: 80rem;
-    padding-top: 2rem;
-    font-size: 1rem;
+  header {
+    padding: 1rem;
   }
 
   nav ul {
-    width: 50%;
+    width: 60%;
     position: absolute;
     right: 0;
-    bottom: 10px;
-    top: 2rem;
+    top: 0;
   }
 
   .feedback figcaption {
@@ -332,20 +413,14 @@ p {
   }
 
   h1 {
-    float: left;
-    width: 50%;
-  }
-
-  header h1 {
     text-align: left;
     float: left;
-    width: 40%;
+    width: 50%;
   }
 
   section {
     max-width: 80rem;
     font-size: .8rem;
-    line-height: 1.2;
     padding-left: 2rem;
     padding-right: 2rem;
   }
@@ -362,6 +437,10 @@ p {
     max-width: 100rem;
   }
 
+  footer {
+    font-size: 65%;
+  }
+
 }
 
 @media only screen and (min-width: 90em) {
@@ -370,49 +449,36 @@ p {
     font-size: 130%;
   }
 
-  .top h3 {
-    font-size: 100%;
-  }
-
-  header {
-    padding: 1rem;
-  }
-
   .feedback h2 {
-    max-width: 80rem;
-    padding-top: 2rem;
     font-size: 2rem;
-  }
-
-  nav ul {
-    width: 50%;
-    position: absolute;
-    right: 0;
-    bottom: 10px;
-    top: 3rem;
-  }
-
-  .feedback figcaption {
-    font-size: .8rem;
-  }
-
-  h1 {
-    float: left;
-    width: 50%;
   }
 
   header h1 {
-    padding: .5rem;
     font-size: 2rem;
     font-weight: bold;
     font-family: Courgette, cursive;
-    margin: 0 auto;
     text-align: center;
   }
 
   section {
     font-size: 100%;
     line-height: 1.3;
+  }
+
+  footer img {
+    margin-left: 6rem;
+    margin-right: 6rem;
+    max-width: 13em;
+  }
+
+  blockquote p {
+    margin: 0;
+  }
+
+  blockquote cite {
+    font-size: .6rem;
+    margin-left: 0;
+    margin-top: 1rem;
   }
 
 }
